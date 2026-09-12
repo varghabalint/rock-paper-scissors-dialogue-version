@@ -63,14 +63,13 @@ function getPlayerInput() {
       "Game over\n\nYou doomed the world , I'll take over every single computer in the world!!\n\n\nHAHAHAHAHAHHAAH";
     return;
   }
-
-  if (!["p", "r", "s", "P", "R", "S"].includes(playerInput)) {
+  if (!["p", "r", "s", "P", "R", "S"].includes(playerInput.trim())) {
     alert(
       `Please use only the letters provided.\n\n('r' for rock,'p' for paper,'s' for scissors)`,
     );
     getPlayerInput();
   } else {
-    players_choice = choiceToNumber[playerInput].trim();
+    players_choice = choiceToNumber[playerInput];
   }
 }
 
